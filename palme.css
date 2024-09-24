@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    background-color: #e0f7fa; /* Fondo claro */
+    overflow: hidden;
+}
+
+.hoja {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: green;
+    clip-path: polygon(50% 0%, 60% 20%, 75% 10%, 80% 25%, 95% 20%, 100% 50%, 95% 80%, 80% 75%, 75% 90%, 60% 80%, 50% 100%, 40% 80%, 25% 90%, 20% 75%, 5% 80%, 0% 50%, 5% 20%, 20% 25%, 25% 10%, 40% 20%);
+    animation: sway 4s infinite ease-in-out;
+}
+
+/* Hojas del lado izquierdo */
+.hoja-izq {
+    left: 0;
+}
+
+.hoja-izq:nth-child(1) {
+    top: 5vh;
+    transform: rotate(-30deg);
+}
+
+.hoja-izq:nth-child(2) {
+    top: 25vh;
+    transform: rotate(-40deg);
+}
+
+.hoja-izq:nth-child(3) {
+    top: 45vh;
+    transform: rotate(-50deg);
+}
+
+/* Hojas del lado derecho */
+.hoja-der {
+    right: 0;
+}
+
+.hoja-der:nth-child(1) {
+    top: 10vh;
+    transform: rotate(30deg);
+}
+
+.hoja-der:nth-child(2) {
+    top: 30vh;
+    transform: rotate(40deg);
+}
+
+.hoja-der:nth-child(3) {
+    top: 50vh;
+    transform: rotate(50deg);
+}
+
+/* Animación de movimiento */
+@keyframes sway {
+    0%, 100% {
+        transform: translateX(0) rotate(var(--rotate));
+    }
+    50% {
+        transform: translateX(10px) rotate(var(--rotate));
+    }
+}

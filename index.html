@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de Inicio de Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="palme.css">
+   
+</head>
+<body>
+    <div id="splash-screen">
+        <div class="logo-container">
+            <img src="Amazon.jpg" alt="Logo" class="logo">
+        </div>
+        <div class="loader"></div>
+    </div>
+    <div id="login-screen" style="display: none;">
+        <form id="login-form">
+            <h2>Iniciar Sesión</h2>
+            <input type="text" id="username" placeholder="Usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
